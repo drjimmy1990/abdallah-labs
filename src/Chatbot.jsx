@@ -9,7 +9,7 @@ const WEBHOOK_URL = import.meta.env.VITE_CHATBOT_WEBHOOK_URL || "";
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
   const [msgs, setMsgs] = useState([
-    { role: "bot", text: "أهلاً! 👋 أنا المساعد الذكي لعبدالله لابز.\nكيف أقدر أساعدك اليوم؟" },
+    { role: "bot", text: "أهلاً 👋\nاكتب فكرتك باختصار، وسأساعدك في ترتيبها وتحويلها إلى طلب واضح ومرتب." },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -97,8 +97,8 @@ export default function Chatbot() {
       <div
         dir="rtl"
         style={{
-          position: "fixed", bottom: 100, left: 16, right: 16, zIndex: 9998,
-          width: "auto", maxWidth: 380,
+          position: "fixed", bottom: 100, left: 16, zIndex: 9998,
+          width: "min(380px, calc(100vw - 32px))",
           height: open ? "min(520px, calc(100vh - 160px))" : 0,
           opacity: open ? 1 : 0,
           transform: open ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
