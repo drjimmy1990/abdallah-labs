@@ -304,7 +304,7 @@ function Hero() {
         </div>
 
         {/* Floating dashboard mockup */}
-        <div style={{ marginTop: 64, perspective: 1000 }}>
+        <div className="dashboard-mockup" style={{ marginTop: 64, perspective: 1000 }}>
           <div style={{
             background: "rgba(15,15,30,0.8)",
             border: "1px solid rgba(124,58,237,0.15)",
@@ -887,7 +887,7 @@ export default function App() {
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&display=swap');
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
         body { background: #050509; overflow-x: hidden; }
         
         ::selection { background: rgba(124,58,237,0.4); color: #fff; }
@@ -905,6 +905,8 @@ export default function App() {
           .hero-buttons { flex-direction: column !important; width: 100%; }
           .hero-buttons a { width: 100% !important; text-align: center !important; }
           .site-footer { flex-direction: column !important; text-align: center !important; justify-content: center !important; }
+          .dashboard-mockup { margin-top: 36px !important; }
+          .dashboard-mockup > div { padding: 16px 14px !important; }
         }
         @media (min-width: 769px) {
           .mob-toggle { display: none !important; }

@@ -97,8 +97,8 @@ export default function Chatbot() {
       <div
         dir="rtl"
         style={{
-          position: "fixed", bottom: 100, left: 28, zIndex: 9998,
-          width: "min(380px, calc(100vw - 40px))",
+          position: "fixed", bottom: 100, left: 16, right: 16, zIndex: 9998,
+          width: "auto", maxWidth: 380,
           height: open ? "min(520px, calc(100vh - 160px))" : 0,
           opacity: open ? 1 : 0,
           transform: open ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
